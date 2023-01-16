@@ -358,4 +358,39 @@ public class Main {
 //        }
 //        return -1;
 //    }
+
+
+
+    //Sum Odd
+//    public static void main(String[] args) {
+//        //calls the method
+//        System.out.println(sumOdd(1,11));
+//    }
+//
+//    public static boolean isOdd(int number) {
+//        //check if the value is greater than 0
+//        if (number <= 0) {
+//            return false;
+//        }
+//        //if the value is divided by 2 and the remainder is not equal to 0 then it is an odd number
+//        return number % 2 != 0;
+//    }
+//
+//    public static int sumOdd(int start, int end) {
+//        int sumOfOddNumbers = 0;
+//        //makes sure that the start number is not smaller than the end number
+//        //makes sure that the end number is bigger than 0
+//        if (start <= end && start > 0){
+//            //the loop continues till the start value reach the end value
+//            for (start = start; start <= end; start++) {
+//                if (isOdd(start)) {
+//                    sumOfOddNumbers = sumOfOddNumbers + start;
+//                }
+//            }
+//        }else {//if any of the conditions are not met return -1 to indicate there is an error
+//            return -1;
+//        }
+//        //returns the value to the main method
+//        return sumOfOddNumbers;
+//    }
 }
