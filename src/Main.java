@@ -751,46 +751,106 @@ public class Main {
 
 
     //Diagonal Star
-    public static void main(String[] args) {
-        printSquareStar(2);
-    }
-    public static void printSquareStar(int number) {
-        if (number < 5) {
-            System.out.println("Invalid Value");
-        } else {
-            int columCount = 1;
-            int rowCount = 1;
-            for (rowCount = 1; rowCount <= number; rowCount++) {
-                for (int b = 1; b <= number; b++) {
-                    if (rowCount == 1 || rowCount == number) {
-                        //top and bottom *
-                        System.out.print("*");
-                    }
-                    if (rowCount > 1 && rowCount < number) {
-                        for (int c = 1; c <= number; c++) {
-                            if (c == 1 || c == number) {
-                                //border *
-                                System.out.print("*");
-                                columCount++;
-                            } else if (columCount == rowCount) {//inner   (number - 2) / 2 + 1
-                                System.out.print("*");
-                                columCount++;
-                            } else if (columCount == number - rowCount + 1) {
-                                System.out.print("*");
-                                columCount++;
-                            } else {
-                                System.out.print(" ");
-                                columCount++;
-                            }
-                        }
-                        columCount = 1;
-                        break;
-                    }
-                }
-                System.out.print("\n");
-            }
+//    public static void main(String[] args) {
+//        printSquareStar(2);
+//    }
+//    public static void printSquareStar(int number) {
+//        if (number < 5) {
+//            System.out.println("Invalid Value");
+//        } else {
+//            int columCount = 1;
+//            int rowCount = 1;
+//            for (rowCount = 1; rowCount <= number; rowCount++) {
+//                for (int b = 1; b <= number; b++) {
+//                    if (rowCount == 1 || rowCount == number) {
+//                        //top and bottom *
+//                        System.out.print("*");
+//                    }
+//                    if (rowCount > 1 && rowCount < number) {
+//                        for (int c = 1; c <= number; c++) {
+//                            if (c == 1 || c == number) {
+//                                //border *
+//                                System.out.print("*");
+//                                columCount++;
+//                            } else if (columCount == rowCount) {//inner   (number - 2) / 2 + 1
+//                                System.out.print("*");
+//                                columCount++;
+//                            } else if (columCount == number - rowCount + 1) {
+//                                System.out.print("*");
+//                                columCount++;
+//                            } else {
+//                                System.out.print(" ");
+//                                columCount++;
+//                            }
+//                        }
+//                        columCount = 1;
+//                        break;
+//                    }
+//                }
+//                System.out.print("\n");
+//            }
+//
+//        }
+//    }
 
-        }
-    }
+
+
+    //Input Calculator
+//    public static void main(String[] args) {
+//        inputThenPrintSumAndAverage();
+//    }
+//    public static void inputThenPrintSumAndAverage () {
+//        int sumNumbers = 0;
+//        int numbersCounter = 0;
+//        double average = 0;
+//        boolean quit = false;
+//        Scanner userInput = new Scanner(System.in);
+//        while (!quit) {
+//            try {
+//                sumNumbers += Integer.parseInt(userInput.nextLine());
+//                numbersCounter++;
+//
+//            } catch (Exception e) {
+//                average = Math.ceil((double)sumNumbers / numbersCounter);
+//                System.out.println("SUM = "+ sumNumbers + " AVG = " + (long)average);
+//                quit = true;
+//            }
+//        }
+//    }
+
+
+
+    //Paint Job
+//    public static void main(String[] args) {
+//        System.out.println(getBucketCount(0.75,0.75,0.5,0));
+//        System.out.println(getBucketCount(3.4, 2.1, 1.5));
+//        System.out.println(getBucketCount(6.26, 2.2));
+//    }
+//    public static int getBucketCount (double width, double height, double areaPerBucket, int extraBuckets) {
+//        if (width <= 0 || height <= 0 || areaPerBucket <= 0 || extraBuckets < 0) {
+//            return -1;
+//        }
+//        double area = width * height;
+//        double neededBuckets = (area - (areaPerBucket * extraBuckets)) / areaPerBucket;
+//        neededBuckets = Math.ceil(neededBuckets);
+//        return (int)neededBuckets;
+//    }
+//    public static int getBucketCount (double width, double height, double areaPerBucket) {
+//        if (width <= 0 || height <= 0 || areaPerBucket <= 0) {
+//            return -1;
+//        }
+//        double area = width * height;
+//        double neededBuckets = area / areaPerBucket;
+//        neededBuckets = Math.ceil(neededBuckets);
+//        return (int)neededBuckets;
+//    }
+//    public static int getBucketCount (double area, double areaPerBucket) {
+//        if (area <= 0 || areaPerBucket <= 0) {
+//            return -1;
+//        }
+//        double neededBuckets = area / areaPerBucket;
+//        neededBuckets = Math.ceil(neededBuckets);
+//        return (int)neededBuckets;
+//    }
 }
 
